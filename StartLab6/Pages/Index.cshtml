@@ -1,0 +1,14 @@
+﻿@page
+@using Models
+@inject CAspnetcoreStartlab6Startlab6AppDataKunden2MdfContext db
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<ul>
+    @foreach (var item in db.Kundes)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
